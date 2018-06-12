@@ -1,4 +1,6 @@
 machine:
+ node:
+  version:6.1.0
  services:
   - docker
 
@@ -8,3 +10,9 @@ machine:
  test:
   override:
     - docker run devops npm test
+
+deployment:
+  qa:
+    branch: /feature_.*/
+    commands:
+      -sh deployment/qa.sh

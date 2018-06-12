@@ -1,0 +1,17 @@
+{
+  "name": "co.com.example",
+  "version": "1.0.0",
+  "description": "example",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "lina.quintero",
+  "license": "ISC",
+  "dependencies": {
+    "docker": "^1.0.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  }
+}

@@ -1,10 +1,14 @@
-machine:
- services:
-  - docker
+version: 2
+jobs:
+  build:
+    docker:
+      -image:docker:17.05.0-ce-git
 
- dependencies:
-  override:
-    - docker build -t devops .
- test:
-  override:
-    - docker run devops npm test
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      -run: docker build -t devops .
+
+      # run tests!
+      -run: docker run devops npm test
